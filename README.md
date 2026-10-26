@@ -23,8 +23,10 @@ By design, local credential generation tools allow clients to pass arbitrary ext
 ## 2. VRP TRIAGE & DISCLOSURE RECORD
 
 * **Ticket Reference:** Google Issue Tracker `#522452897`
-* **Status:** Deprioritized via automated triage / Marked "Infeasible" / "Intended Behavior"
-* **Summary:** The report detailed the potential for arbitrary audience minting and cross-domain token execution. Institutional response shifted the issue into automated processing queues without addressing the root reliance model or issuing remediation guidance for downstream relying parties.
+* **Title:** Living off the Land Identity Hijack: Access and Identity Token Minting for Secret Key Extraction and Critical Cloud Infrastructure Cross-Domain Execution
+* **Initial Status:** Closed via automated triage as `Won't Fix (Intended Behavior)` (Priority P4 / Severity S4)
+* **Escalation & Override Status:** Reopened and Assigned to Google Identity Engineering (`wo...@google.com`) — Priority escalated to `P3`
+* **Summary:** The report details arbitrary OIDC audience minting via `gcloud` permitting cross-domain token execution. While initial automated triage dismissed the primitive as intended interoperability requiring local terminal access, formal escalation forced a manual override and assignment to human security staff.
 
 ---
 
@@ -61,12 +63,15 @@ The ability to mint arbitrarily scoped OIDC assertions via standard CLI tools pr
 
 ---
 
-## 6. GOOGLE VRP TRIAGE FAILURE & RESEARCH SUPPRESSION
+## 6. GOOGLE VRP TRIAGE MECHANICS & ESCALATION ANALYSIS
 
-Google’s Vulnerability Reward Program (VRP) increasingly functions as an asymmetric bureaucratic barrier designed to deny researcher credit, avoid bounty payouts, and quietly cannibalize external security research.
+The operational record of Issue Tracker `#522452897` demonstrates the friction point between automated VRP triage filters and valid architectural disclosure[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span).
 
-### Institutional Exploitation Patterns
+### Verified Case Timeline
+* **Automated Dismissal (Jun 10, 2026):** Automated triage closed the report as "Intended Behavior," citing third-party trust requirements and prior local terminal access[span_9](start_span)[span_9](end_span).
+* **Formal Technical Escalation (Jun 10, 2026):** Rebuttal submitted highlighting CI/CD pipeline execution, containerized runner exposure, and unconstrained token-minting risks[span_10](start_span)[span_10](end_span).
+* **Institutional Override (Jun 11, 2026):** Ticket status flipped from `Won't Fix` to `Assigned`, priority escalated from `P4` to `P3`, and routed directly to a Google engineer (`wo...@google.com`)[span_11](start_span)[span_11](end_span).
 
-* **Automated Rejection as First-Line Defense:** Issue Tracker `#522452897` was summarily dismissed using canned "intended behavior" rationale without technical review by identity infrastructure engineers.
-* **Silent Assimilation & Credit Erasure:** Valid structural vectors submitted through official channels are walled off as non-issues, only for the underlying infrastructure and threat models to be silently updated, patched, or integrated into Google threat intelligence publications—completely stripping attribution from the researcher who uncovered the flaw.
-* **Asymmetric Exploitation of Independent Researchers:** Google leverages crowdsourced security research as a zero-cost, zero-accountability auditing tool. Researchers invest technical labor to map architectural vulnerabilities, while Google uses automated triage gates to retain full control over public disclosure, credit, and remediation timelines behind closed doors.
+### Takeaways for Independent Security Research
+* **Automated Triage Wall:** Standard VRP front-ends use canned "prior access" templates to drop architectural reports before reach of platform engineers[span_12](start_span)[span_12](end_span).
+* **Forced Human Escalation:** Technical breakdowns challenging the narrow definition of terminal execution can force manual reopening and priority escalation[span_13](start_span)[span_13](end_span).
