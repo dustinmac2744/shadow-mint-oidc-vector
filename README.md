@@ -65,13 +65,13 @@ The ability to mint arbitrarily scoped OIDC assertions via standard CLI tools pr
 
 ## 6. GOOGLE VRP TRIAGE MECHANICS & ESCALATION ANALYSIS
 
-The operational record of Issue Tracker `#522452897` demonstrates the friction point between automated VRP triage filters and valid architectural disclosure[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span).
+The operational record of Issue Tracker `#522452897` demonstrates the friction point between automated VRP triage filters and valid architectural disclosure.
 
 ### Verified Case Timeline
-* **Automated Dismissal (Jun 10, 2026):** Automated triage closed the report as "Intended Behavior," citing third-party trust requirements and prior local terminal access[span_9](start_span)[span_9](end_span).
-* **Formal Technical Escalation (Jun 10, 2026):** Rebuttal submitted highlighting CI/CD pipeline execution, containerized runner exposure, and unconstrained token-minting risks[span_10](start_span)[span_10](end_span).
-* **Institutional Override (Jun 11, 2026):** Ticket status flipped from `Won't Fix` to `Assigned`, priority escalated from `P4` to `P3`, and routed directly to a Google engineer (`wo...@google.com`)[span_11](start_span)[span_11](end_span).
+* **Automated Dismissal (Jun 10, 2026):** Automated triage closed the report as "Intended Behavior," citing third-party trust requirements and prior local terminal access.
+* **Formal Technical Escalation (Jun 10, 2026):** Rebuttal submitted highlighting CI/CD pipeline execution, containerized runner exposure, and unconstrained token-minting risks.
+* **Institutional Override (Jun 11, 2026):** Ticket status flipped from `Won't Fix` to `Assigned`, priority escalated from `P4` to `P3`, and routed directly to a Google engineer (`wo...@google.com`).
 
 ### Takeaways for Independent Security Research
-* **Automated Triage Wall:** Standard VRP front-ends use canned "prior access" templates to drop architectural reports before reach of platform engineers[span_12](start_span)[span_12](end_span).
-* **Forced Human Escalation:** Technical breakdowns challenging the narrow definition of terminal execution can force manual reopening and priority escalation[span_13](start_span)[span_13](end_span).
+* **Automated Triage Wall:** Standard VRP front-ends use canned "prior access" templates to drop architectural reports before reach of platform engineers.
+* **Forced Human Escalation:** Technical breakdowns challenging the narrow definition of terminal execution can force manual reopening and priority escalation.
